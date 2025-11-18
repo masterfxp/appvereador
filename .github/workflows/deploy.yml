@@ -6,7 +6,6 @@ on:
 
 jobs:
   ftp-deploy:
-    name: Deploy via FTP
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +21,4 @@ jobs:
           protocol: ftp
           port: 21
           security: loose
-          passive: true
-          timeout: 60000
           server-dir: /public_html/

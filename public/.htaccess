@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirecionar index.php?page=xxx para /xxx (redirecionamento permanente)
+RewriteCond %{THE_REQUEST} /index\.php\?page=([^\s&]+) [NC]
+RewriteRule ^ /%1? [R=301,L]
+
+# Redirecionar raiz para dashboard
+RewriteRule ^$ /dashboard [R=301,L]
+
+# Permitir acesso direto a arquivos existentes (CSS, JS, imagens, etc)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Permitir acesso direto a diretórios existentes
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirecionar todas as outras requisições para index.php
+RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
+

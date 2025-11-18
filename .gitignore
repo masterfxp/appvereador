@@ -1,0 +1,54 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.production
+config.env
+deploy-config.json
+
+# Logs
+*.log
+logs/
+pm2-error.log
+pm2-out.log
+
+# Banco de dados
+*.sqlite
+*.sqlite-journal
+database-backup.sqlite
+database.sqlite
+
+# Arquivos temporários
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build
+dist/
+build/
+*.zip
+
+# Backup
+backup/
+backups/
+
+# Testes
+coverage/
+.nyc_output/
+
+# Sistema
+*.pid
+*.seed
+*.pid.lock
+
+

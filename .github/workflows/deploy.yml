@@ -10,16 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar código do repositório
+      - name: Baixar o código do repositório
         uses: actions/checkout@v3
 
       - name: Deploy usando FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: 82.25.67.216
-          username: u698920850.uniasessor.com.br
+          server: 82.215.67.216
+          username: u698920850.uniaessor.com.br
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/
-          protocol: ftp
-          port: 21
-          log-level: verbose

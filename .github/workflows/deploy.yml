@@ -16,8 +16,12 @@ jobs:
       - name: Deploy usando FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftp.uniasessor.com.br
+          server: 82.25.67.216
           username: u698920850.uniasessor.com.br
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
+          port: 21
           security: loose
+          passive: true
+          timeout: 60000
+          server-dir: /public_html/

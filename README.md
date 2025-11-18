@@ -264,6 +264,6 @@ Para suporte, entre em contato:
 ---
 
 Desenvolvido com ❤️ para vereadores e assessores
-Deploy atualizadoo 2 🚀
+Deploy atualizadao 2 🚀
 
 

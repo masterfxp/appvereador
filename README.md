@@ -13,7 +13,7 @@ Sistema SaaS completo para gestão de gabinetes de vereadores, desenvolvido com 
 ### 👥 Atendimento ao Públicoa
 - Formulário de solicitações da população
 - Upload de imagens e PDFs
-- Integração com WhatsApp e e-dmail
+- Integração com WhatsApp e e-dmaildwa
 - Dashboard de indicadores
 - Mapa com georreferenciamenccto (Goodwgle Maps)
 

@@ -10,7 +10,7 @@ Sistema SaaS completo para gestão de gabinetes de vereadores, desenvolvido com 
 - Geração automática de documentos com IA
 - Biblioteca de templates por município
 
-### 👥 Atendimento ao Público
+### 👥 Atendimento ao Públicoa
 - Formulário de solicitações da população
 - Upload de imagens e PDFs
 - Integração com WhatsApp e e-mail

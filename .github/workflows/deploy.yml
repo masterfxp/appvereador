@@ -5,14 +5,15 @@ on:
     branches: [ "main" ]
 
 jobs:
-  deploy:
+  ftp-deploy:
+    name: Deploy via FTP
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar código do repositório
+      - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Deploy via FTP
+      - name: Deploy somente da pasta PUBLIC
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: 82.25.67.216
@@ -20,9 +21,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-
-          # Envia apenas a pasta public do repositório
-          local-dir: ./public/
-
-          # Vai para a pasta raiz da hospedagem
+          security: loose
+          local-dir: public/
           server-dir: /public_html/

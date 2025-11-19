@@ -2,34 +2,25 @@ name: Deploy automático para Hostinger
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
-  deploy:
+  ftp-deploy:
+    name: Deploy via FTP
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Deploy to Hostinger
+      - name: Deploy somente da pasta PUBLIC
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          # 🔥 DADOS DO SEU FTP (estes são fixos)
           server: 82.25.67.216
           username: u698920850.appuniasessor
           password: ${{ secrets.FTP_PASSWORD }}
-
           protocol: ftp
           port: 21
           security: loose
-
-          # 🔥 Pasta do GitHub para enviar
           local-dir: public/
-
-          # 🔥 Pasta destino no Hostinger
           server-dir: /public_html/
-
-          # 🔥 Limpa tudo antes de enviar
-          dangerous-clean-slate: true
-          timeout: 60000

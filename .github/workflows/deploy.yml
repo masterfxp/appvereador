@@ -2,26 +2,24 @@ name: Deploy automático para Hostinger
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Baixar repositório
+      - name: Baixar código do repositório
         uses: actions/checkout@v3
 
-      - name: Deploy para Hostinger via FTP
+      - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: 82.25.67.216
           username: u698920850.appuniasessor
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
           protocol: ftp
-          security: loose
-          local-dir: ./
-          server-dir: /public_html/
-          log-level: verbose
+          port: 21
+
+          # Enviar SOMENTE o conteúdo da pasta public_html
+          local-dir: public_html
+          server-dir: /

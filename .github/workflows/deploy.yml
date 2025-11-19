@@ -20,8 +20,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          
-          # envia tudo
-          local-dir: ./
-          # para dentro da pasta pública da Hostinger
+
+          # Envia apenas a pasta public do repositório
+          local-dir: ./public/
+
+          # Vai para a pasta raiz da hospedagem
           server-dir: /public_html/

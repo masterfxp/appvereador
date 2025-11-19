@@ -8,17 +8,20 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Baixar repositório
         uses: actions/checkout@v3
 
-      - name: Deploy to Hostinger via FTP
+      - name: Deploy para Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: 82.25.67.216
           username: u698920850.appuniasessor
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
           port: 21
-          server-dir: /public_html/
+          protocol: ftp
           security: loose
+          local-dir: ./
+          server-dir: /public_html/
+          log-level: verbose

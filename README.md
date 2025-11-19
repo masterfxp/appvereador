@@ -4,7 +4,7 @@ Sistema SaaS completo para gestão de gabinetes de vereadores, desenvolvido com 
 
 ## 🚀 Funcionalidades
 
-### 🏛️ Apoio Legislativo
+### 🏛️ Apoio Legislativodwa
 - CRUD de projetos de lei, indicações, requerimentos e moções
 - Histórico de tramitação
 - Geração automática de documentos com IA
